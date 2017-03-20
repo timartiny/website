@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Ian Martiny - Interests</title>
+  <meta name="description" content="Ian Martiny website" />
+  <meta name="keywords" content="Ian, Martiny, Ian Martiny" />
+  <meta http-equiv="content-type" content="text/html" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link id="sidebar_import" rel="import" href="sidebar.html">
+  <link id="header_import" rel="import" href="header.html">
+  <link id="footer_import" rel="import" href="footer.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>   
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <script>
+        var link = document.querySelector('#header_import');
+        var content = link.import;
+
+        var el = content.querySelector("#whole_header");
+        $("#header").html(el.cloneNode(true));
+        menu3.className="selected";
+      </script>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+          <script>
+            var link = document.querySelector('#sidebar_import');
+            var content = link.import;
+
+            var el = content.querySelector("#whole_sidebar");
+            $("#sidebar_container").html(el.cloneNode(true));
+          </script>
+      </div>
+      <div id="content">
+        <h1>Interests</h1>
+        <h2>Scholastic</h2>
+        <p>Math is my main interest, everything else stems from that. My math interests include:</p>
+        <ul>
+            <li>Abstract Algebra</li>
+            <li>Number Theory</li>
+            <li>Combinatorics</li>
+            <li>Numerical Computation (more Linear Algebra than Differential Equations)</li>
+        </ul>
+        <p>I'm also a huge fan of computers and making them do cool things. Naturally this lead to my interest in cryptography and computer security.</p>
+        <p>I have worked on a few projects related to my interests that I'm proud enough in to display here, such as:</p>
+        <ul>
+            <li><a href="interests/3SAT.pdf" target="_blank">P vs NP (and the 3SAT problem)</a> - a Senior capstone paper</li>
+            <li><a href="interests/ECs.pdf" target="_blank">Elliptic Curves</a> - a directed study on the mathematics behind ECs</li>
+        </ul>
+
+        <h2>Extra-Curricular</h2>
+        <p>I love physical activity and sports, I've wrestled, played football and rugby and love to swim and workout</p>
+        <p>Living in Colorado this naturally lends itself to hiking, camping, biking, and skiing/snowboarding</p>
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+          <script>
+            var link = document.querySelector('#footer_import');
+            var content = link.import;
+
+            var el = content.querySelector("#whole_foot");
+            $("#footer").html(el.cloneNode(true));
+          </script>
+    </div>
+  </div>
+</body>
+</html>
