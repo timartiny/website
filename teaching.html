@@ -7,34 +7,25 @@
   <meta name="keywords" content="Ian, Martiny, Ian Martiny" />
   <meta http-equiv="content-type" content="text/html" />
   <link rel="stylesheet" type="text/css" href="style/style.css" />
-  <link id="sidebar_import" rel="import" href="sidebar.html">
-  <link id="header_import" rel="import" href="header.html">
-  <link id="footer_import" rel="import" href="footer.html">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>   
+  <script>
+$(function(){
+    $("#header").load("header.html", function(){
+        $("#menu2").addClass("selected");
+    }); 
+      $("#footer").load("footer.html"); 
+      $("#sidebar_container").load("sidebar.html"); 
+});
+  </script>
 </head>
 
 <body>
   <div id="main">
     <div id="header">
-      <script>
-        var link = document.querySelector('#header_import');
-        var content = link.import;
-
-        var el = content.querySelector("#whole_header");
-        $("#header").html(el.cloneNode(true));
-        menu2.className="selected";
-      </script>
     </div>
     <div id="content_header"></div>
     <div id="site_content">
       <div id="sidebar_container">
-          <script>
-            var link = document.querySelector('#sidebar_import');
-            var content = link.import;
-
-            var el = content.querySelector("#whole_sidebar");
-            $("#sidebar_container").html(el.cloneNode(true));
-          </script>
       </div>
       <div id="content">
           I have TA'd for many courses including:
@@ -54,13 +45,6 @@
     </div>
     <div id="content_footer"></div>
     <div id="footer">
-    <script>
-        var link = document.querySelector('#footer_import');
-        var content = link.import;
-
-        var el = content.querySelector("#whole_foot");
-        $("#footer").html(el.cloneNode(true));
-    </script>
     </div>
   </div>
 </body>
