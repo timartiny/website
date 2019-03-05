@@ -348,3 +348,25 @@ table tr td
     position: relative;
     left: 10px;
 }
+
+#papers a img {
+    display: none;
+}
+#papers a:hover img {
+    display: inline;
+    border: 0px;
+    height: 12px;
+    position: relative;
+    left: 10px;
+}
+
+#links a img {
+    display: none;
+}
+#links a:hover img {
+    display: inline;
+    border: 0px;
+    height: 12px;
+    position: relative;
+    left: 10px;
+}
